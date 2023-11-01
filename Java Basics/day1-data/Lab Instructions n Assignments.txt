@@ -1,0 +1,38 @@
+Day 1
+
+1. Ensure that you have followed "day1-data\day1_help\Installation instructions for JDK n IDE.txt" & installed JDK 11 on your computer. 
+Confirm that you have also downloaded Eclipse IDE (STS 3.9.18)
+
+In case of any problems , take help of lab faculty.
+
+2. Edit System environment variable "Path"
+Must have 1st entry in the Path as : <JDK>/bin
+(Already shown in the theory session)
+
+3. Revise class work using 
+3.1 Refer to "day1-data\day1_help\sequence.txt
+3.2 Refer to code samples from : day1.1
+
+
+4. Go through some of the readymade code samples given for practice.
+day1_help\rdy_code\Test1.txt, Test2.txt ,Test3.txt, Test4.txt
+(Refer to while & switch-case syntax carefully)
+ 
+
+Solving assignments : 
+
+1. The java program should run till user enters "quit" or any other option than add or sub or mult or div.
+Prompt user to enter the input operation : (add|sub|mult|div) & 2 numbers(double)
+Display the result of the operation.
+Use Scanner for accepting all inputs from user. 
+Hint : use switch-case
+
+
+2. Find the compound interest n the amount 
+Accept principle , interest rate n time period in years from user , using scanner.
+Formula : 
+Compound Interest=Principle*(1+(rate / 100))^time – Principle
+time : time period in years.
+
+
+

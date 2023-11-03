@@ -1,0 +1,144 @@
+Day 1
+
+1. Ensure that you have followed "day1-data\day1_help\Installation instructions for JDK n IDE.txt" & installed JDK 11 on your computer. 
+Confirm that you have also downloaded Eclipse IDE (STS 3.9.18)
+
+In case of any problems , take help of lab faculty.
+
+2. Edit System environment variable "Path"
+Must have 1st entry in the Path as : <JDK>/bin
+(Already shown in the theory session)
+
+3. Revise class work using 
+3.1 Refer to "day1-data\day1_help\sequence.txt
+3.2 Refer to code samples from : day1.1
+
+
+4. Go through some of the readymade code samples given for practice.
+day1_help\rdy_code\Test1.txt, Test2.txt ,Test3.txt, Test4.txt
+(Refer to while & switch-case syntax carefully)
+ 
+
+Solving assignments : 
+
+1. The java program should run till user enters "quit" or any other option than add or sub or mult or div.
+Prompt user to enter the input operation : (add|sub|mult|div) & 2 numbers(double)
+Display the result of the operation.
+Use Scanner for accepting all inputs from user. 
+Hint : use switch-case
+
+
+2. Find the compound interest n the amount 
+Accept principle , interest rate n time period in years from user , using scanner.
+Formula : 
+Compound Interest=Principle*(1+(rate / 100))^time – Principle
+time : time period in years.
+
+
+
+Day 2
+
+1. Refer to today's sequence : "day2_help\sequence.txt" & today's code samples for revision.
+
+Important Readmes 
+Today's : sequence.txt
+day2_help\readmes\Regarding Java Data Types.txt
+day2_help\readmes\regarding class n object.txt
+day2-data\day2_help\readmes\regarding GC 
+day2-data\day1_help\readmes\java operators
+
+2. Try to complete pending assignments first (if any !)
+
+3. Solve 
+Create a java application for the following.
+
+3.1 Create a Customer class , with data members (all private : tight encapsulation)
+name(String),email(String),age(int), creditLimit(double)
+
+Do not supply any constructor first(this is to confirm a default constructor)
+Add a method to return all customer details , in a string .
+
+3.2 Create RegisterCustomer class with main method
+Create a customer class instance , using default constructor.
+Display customer details.
+Observe n conclude.
+
+3.3 Now add a parameterized constructor to the  Customer class
+
+3.4 Create RegisterCustomer2 class with main method
+Accept customer details from user using scanner.
+Display customer details.
+
+4. Solve Tank assignment along with memory picture.
+
+What will be the output ?
+
+class Tank {
+  private int level;
+  Tank(int level)
+   {
+     this.level=level;
+   }
+  public void setLevel(int level)
+  {
+    this.level=level;
+  }
+  public int getLevel()
+  {
+    return this.level;
+  }
+}	
+
+public class Assignment {
+  public static void main(String[] args) {
+    Tank t1 = new Tank(10);
+    Tank t2 = new Tank(20);
+     System.out.println("1: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t1 = t2;
+    System.out.println("2: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t1.setLevel(27);
+     System.out.println("3: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t2.setLevel(t1.getLevel()+10);
+     System.out.println("4: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+  }
+}
+
+Are there any objects marked for GC ?
+
+
+Day 3
+
+
+1. Revise today's class work with sequence.txt n code samples.(from day3.1 n day3.2)
+With lab faculty's help , do complete today's  assignments.
+
+1.5 (Optional assignment)
+Add a method to Box class to return a new Box with modified offset dims & test it with TestBox.java
+
+eg : 1st Box dims 10,20,30
+User enters offsets in dims  as 3,-4,5
+2nd box should have dims 13,16,35
+Hint in TestBox :
+Box b1=new Box(sc.nextDouble(),sc.nextDouble(),sc.nextDouble());
+sop("Enter offsets in dims : wOff , dOff hOff");
+Box b2=b1.createNewBox(sc.nextDouble(),sc.nextDouble(),sc.nextDouble());
+
+2.Solve (Mandatory assignment)
+
+Create a Point class Point2D  , under package "com.acts.geometry" for representing a point in x-y co-ordinate system.
+
+2.1 Create a parameterized constructor to accept x & y co-ords.
+
+2.2 Add public String show()) --to return point's x & y co-ords
+
+2.3 Add equals method to Point2D class : boolean returning method : must return true if both points are having same x,y co-ords or false otherwise. : 
+
+2.4 Write a Tester class to test your functionality , TestPoint.java , under the package "tester"
+Create 2 points , using user supplied inputs
+Display x , y co ordinates .
+Display message "SAME" if 2 points are same , otherwise display "DIFFERENT"
+

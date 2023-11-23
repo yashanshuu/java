@@ -1,0 +1,480 @@
+Day 1
+
+1. Ensure that you have followed "day1-data\day1_help\Installation instructions for JDK n IDE.txt" & installed JDK 11 on your computer. 
+Confirm that you have also downloaded Eclipse IDE (STS 3.9.18)
+
+In case of any problems , take help of lab faculty.
+
+2. Edit System environment variable "Path"
+Must have 1st entry in the Path as : <JDK>/bin
+(Already shown in the theory session)
+
+3. Revise class work using 
+3.1 Refer to "day1-data\day1_help\sequence.txt
+3.2 Refer to code samples from : day1.1
+
+
+4. Go through some of the readymade code samples given for practice.
+day1_help\rdy_code\Test1.txt, Test2.txt ,Test3.txt, Test4.txt
+(Refer to while & switch-case syntax carefully)
+ 
+
+Solving assignments : 
+
+1. The java program should run till user enters "quit" or any other option than add or sub or mult or div.
+Prompt user to enter the input operation : (add|sub|mult|div) & 2 numbers(double)
+Display the result of the operation.
+Use Scanner for accepting all inputs from user. 
+Hint : use switch-case
+
+
+2. Find the compound interest n the amount 
+Accept principle , interest rate n time period in years from user , using scanner.
+Formula : 
+Compound Interest=Principle*(1+(rate / 100))^time – Principle
+time : time period in years.
+
+
+
+Day 2
+
+1. Refer to today's sequence : "day2_help\sequence.txt" & today's code samples for revision.
+
+Important Readmes 
+Today's : sequence.txt
+day2_help\readmes\Regarding Java Data Types.txt
+day2_help\readmes\regarding class n object.txt
+day2-data\day2_help\readmes\regarding GC 
+day2-data\day1_help\readmes\java operators
+
+2. Try to complete pending assignments first (if any !)
+
+3. Solve 
+Create a java application for the following.
+
+3.1 Create a Customer class , with data members (all private : tight encapsulation)
+name(String),email(String),age(int), creditLimit(double)
+
+Do not supply any constructor first(this is to confirm a default constructor)
+Add a method to return all customer details , in a string .
+
+3.2 Create RegisterCustomer class with main method
+Create a customer class instance , using default constructor.
+Display customer details.
+Observe n conclude.
+
+3.3 Now add a parameterized constructor to the  Customer class
+
+3.4 Create RegisterCustomer2 class with main method
+Accept customer details from user using scanner.
+Display customer details.
+
+4. Solve Tank assignment along with memory picture.
+
+What will be the output ?
+
+class Tank {
+  private int level;
+  Tank(int level)
+   {
+     this.level=level;
+   }
+  public void setLevel(int level)
+  {
+    this.level=level;
+  }
+  public int getLevel()
+  {
+    return this.level;
+  }
+}	
+
+public class Assignment {
+  public static void main(String[] args) {
+    Tank t1 = new Tank(10);
+    Tank t2 = new Tank(20);
+     System.out.println("1: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t1 = t2;
+    System.out.println("2: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t1.setLevel(27);
+     System.out.println("3: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t2.setLevel(t1.getLevel()+10);
+     System.out.println("4: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+  }
+}
+
+Are there any objects marked for GC ?
+
+
+Day 3
+
+
+1. Revise today's class work with sequence.txt n code samples.(from day3.1 n day3.2)
+With lab faculty's help , do complete today's  assignments.
+
+1.5 (Optional assignment)
+Add a method to Box class to return a new Box with modified offset dims & test it with TestBox.java
+
+eg : 1st Box dims 10,20,30
+User enters offsets in dims  as 3,-4,5
+2nd box should have dims 13,16,35
+Hint in TestBox :
+Box b1=new Box(sc.nextDouble(),sc.nextDouble(),sc.nextDouble());
+sop("Enter offsets in dims : wOff , dOff hOff");
+Box b2=b1.createNewBox(sc.nextDouble(),sc.nextDouble(),sc.nextDouble());
+
+2.Solve (Mandatory assignment)
+
+Create a Point class Point2D  , under package "com.acts.geometry" for representing a point in x-y co-ordinate system.
+
+2.1 Create a parameterized constructor to accept x & y co-ords.
+
+2.2 Add public String show()) --to return point's x & y co-ords
+
+2.3 Add equals method to Point2D class : boolean returning method : must return true if both points are having same x,y co-ords or false otherwise. : 
+
+2.4 Write a Tester class to test your functionality , TestPoint.java , under the package "tester"
+Create 2 points , using user supplied inputs
+Display x , y co ordinates .
+Display message "SAME" if 2 points are same , otherwise display "DIFFERENT"
+
+
+
+Day 4
+0. Refer to tdoay's sequence.txt
+
+1. import day4.1 , to revise array of references  n static keyword
+
+2. import day4.2 , to revise basics in inheritance 
+2.1 Inheritance hierarchy
+2.2constructor invocation (super keyword)
+
+
+2.5 Pls go through inheritance readme , till the topics completed today.
+
+
+Day 5
+
+1. Refer to today's sequence
+import day5.1 n day5.2 in your workspace to revise
+1.1 Constructor invocation in inheritance hierarchy
+1.2 super keyword usages
+1.3. run time polymorphism 
+1.4 upcasting
+
+
+2. Solve Players based assignment , with the help of lab faculty.
+Refer : assignment.png
+
+
+3. What will happen ? (Optional but recommended !)
+(Guess the output along with memory diagrams) : Understand with lab faculty's help.
+Refer : params_passing
+TestParamPassing1.java
+TestParamPassing2.java
+
+
+Day 6
+1. Gentle Reminder !
+Please complete Q 3 of Day 5 (Guess the o/p)
+
+2. Complete earlier pending work
+
+3. No new assignments !
+
+4. import day6.1 , to revise
+downcasting n instanceof keyword
+
+5. import day6.2 to revise
+Abstraction
+abstract classes n intro to interfaces n implementation class syntax
+
+
+
+Day 7
+1. Revise interfaces n exception handling.
+Follow today's sequence n code samples.
+
+2. Refer : "lab work 7\Interface Assignment.png" 
+Solve it as discussed.
+
+
+Optional assignment  (For more practice)
+
+Continue with Player scenario , assignment of Day 5
+
+3. Add a functionality in the sub classes.
+For CricketPlayer : add a method to obtain battingAverage
+For FootballPlayer : add a method : defendGols
+For TennisPlayer : add a method : acesServed
+
+3. Can you add abstraction in the Player class ?
+If yes : do it
+
+33 Add a class TestPLayers in the tester package , with main(...)
+Prompt user for max no of players.
+Options
+1. Add Cricket Player details
+2. Add Football Player details
+3. Add Tennis Player details
+4. Display only name n country for all the players added.
+5. Accept player no from user n invoke play method
+6. Accept player no from user n invoke player specific method (eg : In case of a cricketplayer : battingAverage or in case of tennis player : acesServed.
+
+
+
+Day 8
+1. import day8.1 , to revise 
+try with resources n custom exceptions
+
+2. import day8.2 , to revise
+String related API
+
+
+Solve (With help the lab faculty)
+
+3.  Refer to eclipse project day6.1 from lab work 6
+3.1 Refer to the Classes : Person , Student , Faculty.
+Equality rule : 2 Students/Faculties are the SAME(Duplicate) , if n only if their first name n last name is same.
+How will you add this rule ?
+Hint override equals method , in Person class.
+
+3.2 Write a new Tester (TestEquals)
+Use try-with-resources for Scanner
+Accept details of the 2 students n 1 faculty.
+In case of duplicate , raise the custom exception : InvalidInputException , with error message : dup names detected!!!!
+In case of no duplicates , print the students n faculty details 
+
+Optional part 
+Add above validation rule (check for dups) in the event organizer app n test it !
+
+Day 9
+1. import day9.1 , to revise
+overriding of equals method , with single field : emp id
+
+2. import day9.2 , to revise
+overriding of equals method , with multiple fields : emp id n name
+
+ 
+3. import day9.3 , to revise
+3.1 Date Time handling in Java 8 onwards(MOdern Java)
+3.2 validation rules handling , custom exceptions
+3.3 wrapper classes in java
+
+4. import day9.4 , to revise
+4.1 enum (Color)
+4.2 equals method again 
+4.3 Beginning of showroom management system.
+
+5. Please complete Day 8's assignments.
+
+
+To Lab Faculty : 
+Please help students to complete the pending assignments
+
+
+Day 10
+1. import day10.1 to revise , Showroom management case study
+1.1 Exception handling
+1.2 equals
+1.3 validation rules
+1.4 enum
+1.5 Tester (ShowroomManagement.java)
+
+2. import day10.2 , to understand dis advantages of non generic syntax
+Revise generic class syntax
+
+3. MUST revise Collection framework overview.
+
+4. Tomorrow , after explaining ArrayList API with simple java class (eg : String / Integer) , we are going to port 
+ShowroomManagement.java , to ArrayList .
+
+
+To Lab faculty :
+I have already shown to the students , how to attach debugger , in IDE
+Please revise n help them to complete pending work.
+
+
+Day 11
+
+1. import day11.3 directly ,to revise
+1.1 ArrayList CRUD functionality
+1.2 Sorting the data (Natural ordering n custom ordering)
+
+2. Revise ArrayList vs Vector
+ArrayList vs LinkedList
+
+3. Solve  (with lab faculty help)
+Create Java application for Banking System (Fresh scenario)
+
+Every Bank Account must have acct number(int) , customer name(string), pin (string) account type (enum : SAVING,CURRENT,FD,LOAN) , account balance(double) , creation date(localdate)
+
+
+Validation rules 
+1. account balance > min balance
+2. account type can be either : SAVING | CHECKING | LOAN | FD 
+Add validation methods . In case of failures , throw the custom exception.
+
+Save Bank account details in the growable dynamic data structure : ArrayList
+
+
+Options
+1. Create Bank Account
+Accept all i/ps , validate . In case of success , create bank acct object n store it's reference in the ArrayList.
+
+
+2. View account summary
+i/p : acct no
+o/p : In case of valid acct no , display account details , otherwisw raise custom exception with suitable err message.
+
+3. Withdraw funds
+i/p : acct no , amount to withdraw 
+o/p : In case of valid acct no n sufficient balance withdraw , otherwisw raise custom exception with suitable err message.
+
+4. Deposit funds
+i/p :acct no , amount to deposit 
+o/p : In case of valid acct no  deposit  , otherwisw raise custom exception with suitable err message.
+
+
+
+6. Close Account
+i/p :acct no 
+o/p : In case of valid acct no  delete account details  , otherwisw raise custom exception with suitable err message.
+
+0. Exit.
+
+Day 12
+
+1. import day12.1 to revise 
+custom ordering with multiple sorting criterias
+
+2. import day12.2 to revise
+2.1 Set implementation classes (HashSet / LinkedHashSet / TreeSet)
+2.2 Hashing algorithm basics by overriding hashCode n equals methods
+eg : TestEmpSet.java
+2.3 Iterator n ListIterator
+2.4 Introduction to wild card ? in generic syntax
+
+3. Complete Day11 Banking assignment.
+Add these options , to the tester class
+3.1 Sort bank accounts as per acct nos (asc) , using natural ordering
+3.2 Sort bank accounts as per account creation date  , using custom ordering
+3.3 Sort bank accounts as per account type n balance  , using custom ordering
+
+
+
+Day 13
+1. import day13.1 to revise 
+1.1 Generic syntax(? extends super) n generic methods
+1.2 Map Overview
+1.3 HashMap implementation for Student Management
+
+2. Refer to p1,p2,p3 p4 packages to revise 
+2.1 default methods
+2.2 static methods
+2.3 Functional interfaces
+2.4 Introduction to lambda expression
+
+3. Refer to mysql installation help uploaded on the drive.
+Install mysql on your lab machines (with lab faculty's help , if required)
+(mansys : existing password for ealier installation)
+
+4. Complete pending work.
+
+
+
+Day 14
+
+1. import day14.1 to revise
+1.1 Functional interfaces
+1.2 Lambda expression
+1.3 Functional streams programming
+
+2. Port your banking assignment to Map
+(i.e Replace ArrayList by HashMap) 
+It will be done in a lot simpler n easier !
+
+
+3.Solve for more practice of Functional programming: 
+MUST solve it in declarative style.
+
+3.1  Display all product names of a particular category , exceeding specific price.
+I/P category name & price.
+
+3.2  Prompt user for category n discount.
+Apply that discount on all products of specified category n print it.
+(Assume : products are stored in the Map)
+i/p : category n discount
+
+3.3 Continue with your student map based scenario.
+(Refer day day13.1)
+
+1. Display all student details from a student map
+
+2. Display all student details sorted as per marks
+Use custom ordering
+
+3. Write a tester to print sum of  marks of students for the specified course/subject
+
+
+4 Print name of specified subject  topper
+Hint : Stream's max(Comparator comp): 
+
+5 Print no of  failures for the specified subject chosen  from user.
+(marks < 50  : failure)
+Hint : Stream's count() 
+
+
+Day 15
+
+1. import day15.1 in your workspace , to revise
+1.1 More Higher order functions n functional streams API
+
+2. import day15.1 in your workspace , to revise
+2.1 More Higher order functions n functional streams API
+2.2 Text file handling n buffering 
+(Revise java.io overview)
+
+3. MUST complete Day 14 , assignments with help of Lab Faculty
+
+NO new assignments today !
+
+
+Day 16
+1. Please Complete earlier pending assignments LATER.
+
+2. Revise today's contents : day16.1 : serialization n de-serialization
+day16_jdbc : for JDBC
+
+3. MUST solve today's assignments first , with Lab Faculty's help
+ 
+
+4. For lab exam practice
+
+Develop student management system , to store n restore details from bin file using Object streams 
+4.1 Create a core class : Student
+non static Fields :prn , firstname, lastname, address , marks , course(Enum) , birthDate
+4.2 Populate some student details in a suitable data structure (Suggestion : HashMap)
+4.3 Add IOUtils interface to add methods for storing n restoring student details
+4.3 Write a tester : StudentManagementSystem
+At the startup : restore student details in a map , from bin file (using de-ser.)
+In case of file not found , start with the populated Map
+Options 
+1. Student Admission
+2. Cancel Admission
+3. Update marks
+4. Exit
+Before exiting store the details from student map in a bin file (using ser.)
+
+
+5. JDBC assignment
+From "day16_help\jdbc help\sql\sql.txt" , copy bank_users n bank_accounts table n data.
+Write a JDBC application , to display  all accounts' details
+sql : select * from bank_accounts"
+
+
+
